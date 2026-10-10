@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "The Phantom Warning",
+    "datetime": "2025-01-07T09:30",
+    "location": "Exeter, UK",
+    "details": "I was drifting through town, lost in thought, when I stepped into the street without looking. A piercing shriek sliced through the air—an old woman, her voice cracking like dead leaves underfoot. She pointed a trembling finger at me and whispered something I couldn't quite catch before vanishing into the mist."
+  },
+  {
+    "id": 2,
+    "title": "The Pianist's Lament",
+    "datetime": "2024-03-20T11:30",
+    "location": "Edinburgh, UK",
+    "details": "We wandered into the skeleton of an abandoned theater, its air thick with forgotten breath. As we crept through its crumbling halls, a piano melody began to drift—low, haunting, almost human. The keys moved on their own, playing a piece that felt older than the building itself."
+  },
+  {
+    "id": 3,
+    "title": "The Haunting in Pontefract",
+    "datetime": "2026-10-04T21:34",
+    "location": "England",
+    "details": "The disturbances at this residential property began in 1966 when the Pritchard family moved in and experienced extreme poltergeist activity.\\n• Black Monk of Pontefract: Witnesses described seeing a tall, shadowy, hooded figure resembling a medieval monk moving silently through the rooms.\\n• Physical Disturbances: Family members reported furniture sliding across floors, green-tinted foam spitting from taps, and heavy objects being thrown across rooms by an invisible force.\\n• Unexplained Sensations: Visitors and inhabitants frequently noted sudden drops in temperature and a persistent, unidentifiable burning smell lingering on the upper floor."
+  },
+  {
+    "title": "A ghostly encounter",
+    "datetime": "2026-10-08T19:47",
+    "location": "scotland",
+    "details": "i saw an invisible man",
+    "id": 4
+  }
+]

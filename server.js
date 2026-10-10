@@ -1,0 +1,32 @@
+import http from "http"
+import {serveStatic} from "./utils/serveStatic.js"
+import {getData} from "./utils/getData.js"
+import {handleGet,handlePost}from"./handlers/routeHandlers.js"
+import {handleNews} from "./handlers/routeHandlers.js"
+
+const PORT=process.env.PORT || 8000;
+
+const __dirname=import.meta.dirname;
+
+console.log(await getData())
+
+const server=http.createServer(async(req,res)=>{
+    if(req.url==='/api'){
+        if(req.method==='GET'){
+            return await handleGet(res)
+        }
+        if(req.method==='POST'){
+            return await handlePost(req,res)
+        }
+    }
+    else if(!req.url.startsWith('/api')){
+      return await serveStatic(req,res,__dirname);
+    }
+    else if(req.url.startsWith('/api/news')){
+        return await handleNews(req,res)
+    }
+})
+
+server.listen(PORT, '0.0.0.0', ()=>{
+    console.log(`Server is running on http://localhost:${PORT}`);
+})

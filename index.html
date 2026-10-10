@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>From The Other Side</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <div class="page">
+    <!-- ========== HOME ========== -->
+    <section id="home" class="view active">
+      <header class="top-bar">
+        <div class="logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="candle" class="candle" />
+        </div>
+        <nav>
+          <a href="#" data-view="home" class="nav-link active">Home</a>
+          <a href="#" data-view="read" class="nav-link">Read</a>
+          <a href="#" data-view="upload" class="nav-link">Upload</a>
+        </nav>
+      </header>
+
+      <div class="hero">
+        <h1 class="title">FROM THE<br>OTHER SIDE</h1>
+        <p class="tagline">THE ONLINE HOME<br>OF PARANORMAL<br>SIGHTINGS</p>
+        <p class="copyright">© From The Other Side. All rights reserved.</p>
+        <!-- NEW: entry point to the Live News view -->
+        <p class="news-cta"><a href="#" data-view="news" class="news-link">Check out our news feed!</a> (beta)</p>
+      </div>
+    </section>
+
+    <!-- ========== READ (Sightings list) ========== -->
+    <section id="read" class="view">
+      <header class="top-bar">
+        <div class="logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="candle" class="candle" />
+        </div>
+        <nav>
+          <a href="#" data-view="home" class="nav-link">Home</a>
+          <a href="#" data-view="read" class="nav-link active">Read</a>
+          <a href="#" data-view="upload" class="nav-link">Upload</a>
+        </nav>
+      </header>
+
+      <h2 class="section-title">SIGHTINGS</h2>
+
+      <div id="sightings-list" class="sightings-list">
+        <!-- Cards injected by JS -->
+      </div>
+    </section>
+
+    <!-- ========== UPLOAD (Add Sighting) ========== -->
+    <section id="upload" class="view">
+      <header class="top-bar">
+        <div class="logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="candle" class="candle" />
+        </div>
+        <nav>
+          <a href="#" data-view="home" class="nav-link">Home</a>
+          <a href="#" data-view="read" class="nav-link">Read</a>
+          <a href="#" data-view="upload" class="nav-link active">Upload</a>
+        </nav>
+      </header>
+
+      <h2 class="section-title">ADD SIGHTING</h2>
+
+      <form id="sighting-form" class="form">
+        <label>
+          Title:
+          <input type="text" id="title" placeholder="A ghostly encounter" required />
+        </label>
+
+        <label>
+          Time/Date:
+          <input type="datetime-local" id="datetime" required />
+        </label>
+
+        <label>
+          Location:
+          <input type="text" id="location" placeholder="London, UK" required />
+        </label>
+
+        <label>
+          Details:
+          <textarea id="details" rows="4" placeholder="I was trying to get to sleep when..." required></textarea>
+        </label>
+
+                <button type="submit" class="btn-submit">SUBMIT</button>
+
+        <!-- Success / error message shown after submit -->
+        <p id="form-message" class="form-message" role="status"></p>
+      
+      </form>
+    </section>
+
+    <!-- ========== LIVE NEWS (NEW) ========== -->
+    <section id="news" class="view">
+      <header class="top-bar">
+        <div class="logo">
+          <img src="https://cdn-icons-png.flaticon.com/512/2917/2917995.png" alt="candle" class="candle" />
+        </div>
+        <nav>
+          <a href="#" data-view="home" class="nav-link">Home</a>
+          <a href="#" data-view="read" class="nav-link">Read</a>
+          <a href="#" data-view="upload" class="nav-link">Upload</a>
+        </nav>
+      </header>
+
+      <h1 class="title title-small">FROM THE OTHER SIDE</h1>
+
+      <h2 class="section-title">LIVE NEWS</h2>
+
+      <!-- aria-live: screen readers announce each new headline -->
+      <div id="news-card" class="news-card" aria-live="polite">
+        <p id="news-headline" class="news-headline">Waiting for the spirits…</p>
+      </div>
+
+      <footer class="page-footer">
+        <p class="copyright">© From The Other Side. All rights reserved.</p>
+        <p class="news-cta"><a href="#" data-view="news" class="news-link">Check out our news feed!</a> (beta)</p>
+      </footer>
+    </section>
+
+    <!-- ========== DETAIL MODAL ========== -->
+    <div id="detail-modal" class="modal hidden">
+      <div class="modal-content">
+        <button class="close-btn" id="close-modal">&times;</button>
+        <p class="meta" id="detail-meta"></p>
+        <h3 id="detail-title"></h3>
+        <p id="detail-body"></p>
+      </div>
+    </div>
+  </div>
+
+  <script src="/script.js"></script>
+  <script src="/upload-sightings.js"></script>
+</body>
+</html>
